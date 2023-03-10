@@ -95,7 +95,7 @@ mvn -DdistributionTargetDir="$HOME/app/maven/apache-maven-3.6.x-SNAPSHOT" clean 
 
 > fix org.apache.maven.repository.internal.DefaultVersionResolver#resolveVersion() of module maven-resolver-provider
 
-![dif](https://cdn.jsdelivr.net/gh/uwoerla/maven@master/images/fix-release.png)
+![dif](https://cdn.jsdelivr.net/gh/uwoerla/maven@3.6.3/images/fix-release.png)
 
 ### install
 ```
