@@ -163,7 +163,7 @@ public class DefaultVersionResolver
         if ( RELEASE.equals( version ) )
         {
             metadata = new DefaultMetadata( artifact.getGroupId(), artifact.getArtifactId(), MAVEN_METADATA_XML,
-                                            Metadata.Nature.RELEASE );
+                                            Metadata.Nature.RELEASE_OR_SNAPSHOT ); // always update
         }
         else if ( LATEST.equals( version ) )
         {

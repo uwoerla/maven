@@ -90,3 +90,14 @@ mvn -DdistributionTargetDir="$HOME/app/maven/apache-maven-3.6.x-SNAPSHOT" clean 
 [building-maven]: https://maven.apache.org/guides/development/guide-building-maven.html
 [cla]: https://www.apache.org/licenses/#clas
 
+
+### fix
+
+> fix org.apache.maven.repository.internal.DefaultVersionResolver#resolveVersion() of module maven-resolver-provider
+
+![dif](https://cdn.jsdelivr.net/gh/uwoerla/maven@master/images/fix-release.png)
+
+### install
+```
+mvn clean install -Drat.skip=true -Dcheckstyle.skip=true
+```
