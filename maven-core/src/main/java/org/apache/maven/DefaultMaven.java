@@ -102,7 +102,7 @@ public class DefaultMaven
 
         try
         {
-            result = doExecute( request );
+            result = doExecute( request ); //  入口
         }
         catch ( OutOfMemoryError e )
         {
@@ -215,7 +215,7 @@ public class DefaultMaven
         }
 
         eventCatapult.fire( ExecutionEvent.Type.ProjectDiscoveryStarted, session, null );
-
+        // 解析得到 MavenProject 的集合
         Result<? extends ProjectDependencyGraph> graphResult = buildGraph( session, result );
 
         if ( graphResult.hasErrors() )

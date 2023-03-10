@@ -454,7 +454,7 @@ public class DefaultModelBuilder
         // model path translation
         modelPathTranslator.alignToBaseDirectory( resultModel, resultModel.getProjectDirectory(), request );
 
-        // plugin management injection
+        // 处理 plugin management injection
         pluginManagementInjector.injectManagement( resultModel, request, problems );
 
         fireEvent( resultModel, request, problems, ModelBuildingEventCatapult.BUILD_EXTENSIONS_ASSEMBLED );
@@ -470,10 +470,10 @@ public class DefaultModelBuilder
             lifecycleBindingsInjector.injectLifecycleBindings( resultModel, request, problems );
         }
 
-        // dependency management import
+        // 处理 dependency management import
         importDependencyManagement( resultModel, request, problems, imports );
 
-        // dependency management injection
+        // 处理 dependency management injection
         dependencyManagementInjector.injectManagement( resultModel, request, problems );
 
         modelNormalizer.injectDefaultValues( resultModel, request, problems );

@@ -85,7 +85,7 @@ public class LifecycleStarter
                     + " but there is no POM in this directory (" + session.getExecutionRootDirectory() + ")."
                     + " Please verify you invoked Maven from the correct directory." );
             }
-
+            // 任务列表 eg: [clean, package]
             List<TaskSegment> taskSegments = lifecycleTaskSegmentCalculator.calculateTaskSegments( session );
             projectBuilds = buildListCalculator.calculateProjectBuilds( session, taskSegments );
 
@@ -125,7 +125,7 @@ public class LifecycleStarter
                 logger.info( String.format( "Using the %s implementation with a thread count of %d",
                                             builder.getClass().getSimpleName(), degreeOfConcurrency ) );
             }
-            builder.build( session, reactorContext, projectBuilds, taskSegments, reactorBuildStatus );
+            builder.build( session, reactorContext, projectBuilds, taskSegments, reactorBuildStatus ); // 这里开始执行任务
 
         }
         catch ( Exception e )

@@ -106,7 +106,7 @@ public class LifecycleModuleBuilder
             projectExecutionListener.beforeProjectExecution( new ProjectExecutionEvent( session, currentProject ) );
 
             eventCatapult.fire( ExecutionEvent.Type.ProjectStarted, session, null );
-
+            // 生成执行计划
             MavenExecutionPlan executionPlan =
                 builderCommon.resolveBuildPlan( session, currentProject, taskSegment, new HashSet<Artifact>() );
             List<MojoExecution> mojoExecutions = executionPlan.getMojoExecutions();

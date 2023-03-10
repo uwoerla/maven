@@ -54,7 +54,7 @@ public class SingleThreadedBuilder
                 try
                 {
                     lifecycleModuleBuilder.buildProject( session, reactorContext, projectBuild.getProject(),
-                                                         taskSegment );
+                                                         taskSegment ); // 执行
                     if ( reactorBuildStatus.isHalted() )
                     {
                         break;
